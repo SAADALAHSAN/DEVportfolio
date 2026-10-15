@@ -1,0 +1,35 @@
+/* icons: one purposeful loop each, no drifting */
+@keyframes icoDraw{0%{stroke-dashoffset:0}40%{stroke-dashoffset:-1}40.01%{stroke-dashoffset:1}82%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
+@keyframes icoBlink{0%,100%{opacity:.32}50%{opacity:1}}
+@keyframes icoNode{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.66)}}
+@keyframes icoPlay{0%,70%,100%{transform:scale(1)}78%{transform:scale(.82)}86%{transform:scale(1.05)}}
+.c-skills .chip:nth-child(1) i svg *,.c-skills .chip:nth-child(2) i svg *,.c-skills .chip:nth-child(3) i svg *{stroke-dasharray:1;stroke-dashoffset:0;animation:icoDraw 3.6s ease-in-out infinite}
+.c-skills .chip:nth-child(2) i svg *{animation-duration:3.1s;animation-delay:.5s}
+.c-skills .chip:nth-child(3) i svg *{animation-duration:4s;animation-delay:.25s}
+.c-skills .chip:nth-child(4) i svg circle{transform-origin:12px 12px;animation:icoNode 1.9s ease-in-out infinite}
+.c-skills .chip:nth-child(5) i svg{transform-origin:50% 50%;animation:icoPlay 2.7s ease-in-out infinite}
+.c-skills .chip:nth-child(6) i svg rect{animation:icoBlink 1.5s ease-in-out infinite}
+.c-skills .chip:nth-child(6) i svg rect:nth-child(2){animation-delay:.18s}
+.c-skills .chip:nth-child(6) i svg rect:nth-child(3){animation-delay:.36s}
+.c-skills .chip:nth-child(6) i svg rect:nth-child(4){animation-delay:.54s}
+.c-photo .play svg{transform-origin:50% 50%;animation:icoPlay 2.9s ease-in-out infinite}
+/* bold footer */
+.foot-ticker{position:relative;z-index:2;overflow:hidden;border-bottom:1px solid rgba(255,255,255,.12);padding:18px 0}
+.foot-ticker-row{display:flex;align-items:center;gap:34px;width:max-content;white-space:nowrap;animation:ticker 30s linear infinite}
+.foot-ticker-row span{font-family:var(--display);font-weight:800;font-size:clamp(24px,3.4vw,46px);letter-spacing:-.01em;-webkit-text-stroke:1.3px rgba(255,255,255,.5);color:transparent;text-transform:uppercase}
+.foot-ticker-row b{color:var(--brand);font-size:clamp(15px,1.8vw,24px)}
+@keyframes ticker{to{transform:translateX(-50%)}}
+.foot-stage{position:relative;z-index:1;padding:34px 0 48px}
+.foot-sel{position:relative;display:block;width:max-content;max-width:100%;margin:0 auto;padding:clamp(6px,1vw,16px) clamp(10px,1.4vw,24px)}
+.foot-sel::before{content:"";position:absolute;inset:0;border:1.5px solid var(--tool);border-radius:6px;pointer-events:none}
+.foot-tab{position:absolute;left:-1px;top:-23px;display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--tool)}
+.foot-tab i{width:9px;height:9px;border-radius:2px;background:var(--tool)}
+.fs-h{position:absolute;width:11px;height:11px;background:#0E1822;border:1.6px solid var(--tool);border-radius:2px;z-index:2}
+.fs-h.tl{left:-6px;top:-6px}.fs-h.tr{right:-6px;top:-6px}.fs-h.bl{left:-6px;bottom:-6px}.fs-h.br{right:-6px;bottom:-6px}
+.fs-dim{position:absolute;right:0;bottom:-24px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--tool)}
+@media(prefers-reduced-motion:reduce){
+ .c-skills .chip i svg,.c-skills .chip i svg *,.c-photo .play svg,.foot-ticker-row{animation:none!important;stroke-dashoffset:0!important}
+}
+
+
+

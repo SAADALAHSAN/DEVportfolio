@@ -1,0 +1,10 @@
+/* MARQUEE */
+.marquee{border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);background:rgba(255,255,255,.5);backdrop-filter:blur(6px);overflow:hidden;padding:18px 0;position:relative;z-index:2}
+.marquee .track{display:flex;gap:60px;width:max-content;animation:scroll 26s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.marquee .item{font-family:var(--display);font-weight:600;font-size:26px;display:flex;align-items:center;gap:60px;opacity:.5;white-space:nowrap}
+.marquee .item::after{content:"✦";color:var(--brand);font-size:16px}
+@keyframes scroll{to{transform:translateX(-50%)}}
+.marquee .lbl{position:absolute;top:50%;left:34px;transform:translateY(-50%);z-index:3;font-family:var(--mono);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);background:var(--frame);padding:4px 10px;border:1px solid var(--line-2);border-radius:6px}
+@media(max-width:760px){.marquee .lbl{display:none}}
+

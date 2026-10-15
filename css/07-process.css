@@ -1,0 +1,34 @@
+/* PROCESS | slack thread */
+.process{padding:80px 0}
+.thread{max-width:780px;margin:0 auto;background:var(--frame);border:1px solid var(--line-2);border-radius:18px;box-shadow:var(--sh);overflow:hidden;position:relative}
+.t-head{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--line-2);background:var(--soft)}
+.t-head .ch{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}
+.t-head .ch .hash{color:var(--ink-faint);font-family:var(--mono)}
+.t-head .on{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink-soft)}
+.t-head .on .av{width:22px;height:22px;border-radius:50%;border:2px solid var(--frame);font-family:var(--display);font-size:10px;font-weight:700;color:#fff;display:grid;place-items:center}
+.t-head .avs{display:flex}.t-head .avs .av+.av{margin-left:-8px}
+.t-head .grn{width:8px;height:8px;border-radius:50%;background:#27c06b}
+.t-body{padding:24px 26px 30px;display:flex;flex-direction:column;gap:18px}
+.step-div{display:flex;align-items:center;gap:12px;margin:8px 0 2px}
+.step-div::before,.step-div::after{content:"";height:1px;background:linear-gradient(90deg,transparent,rgba(240,83,28,.35));flex:1}.step-div::after{background:linear-gradient(90deg,rgba(240,83,28,.35),transparent)}
+.step-div span{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand);white-space:nowrap}
+.msg{display:flex;gap:12px;align-items:flex-start}
+.msg .av{width:38px;height:38px;border-radius:11px;flex:none;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:15px;color:#fff}
+.msg.studio .av{background:var(--brand)}
+.msg.client .av{background:#0D99FF}
+.msg .body{flex:1}
+.msg .meta{display:flex;align-items:center;gap:9px;margin-bottom:3px}
+.msg .meta .nm{font-weight:700;font-size:14px}
+.msg .meta .tm{font-family:var(--mono);font-size:11px;color:var(--ink-faint)}
+.msg .tx{font-size:15px;line-height:1.5;color:var(--ink)}
+.msg .file{display:inline-flex;align-items:center;gap:8px;margin-top:8px;background:var(--soft);border:1px solid var(--line-2);border-radius:9px;padding:8px 12px;font-family:var(--mono);font-size:12px;font-weight:700}
+.msg .file svg{width:15px;height:15px;color:var(--tool)}
+.msg .react{display:inline-flex;align-items:center;gap:5px;margin-top:8px;border:1px solid var(--line-2);border-radius:999px;padding:3px 10px;font-size:12px;font-weight:700;background:var(--frame)}
+.msg .react .c{color:var(--ink-soft)}
+.typing{display:flex;align-items:center;gap:12px;color:var(--ink-faint)}
+.typing .av{width:38px;height:38px;border-radius:11px;background:var(--brand);opacity:.5}
+.typing .dots{display:flex;gap:5px}
+.typing .dots span{width:7px;height:7px;border-radius:50%;background:var(--ink-faint);animation:blink 1.2s infinite}
+.typing .dots span:nth-child(2){animation-delay:.2s}.typing .dots span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{opacity:.25}30%{opacity:1}}
+

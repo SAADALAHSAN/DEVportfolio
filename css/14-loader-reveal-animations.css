@@ -1,0 +1,74 @@
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);filter:blur(8px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1),filter .7s}
+.reveal.in{opacity:1;transform:none;filter:none}
+.stagger>*{opacity:0;transform:translateY(20px);filter:blur(6px);transition:opacity .55s cubic-bezier(.2,.7,.2,1),transform .55s cubic-bezier(.2,.7,.2,1),filter .55s}
+.stagger.in>*{opacity:1;transform:none;filter:none;transition-delay:calc(var(--i,0)*85ms)}
+@media(prefers-reduced-motion:reduce){.reveal,.stagger>*{opacity:1;transform:none;filter:none}.marquee .track,.c-now .eq span,.typing .dots span{animation:none}.cloud,.fcom{animation:none}}
+
+/* ===== loader (figma-canvas select reveal) ===== */
+.loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;overflow:hidden;background:#fbfdff;transform:translateY(0);transition:transform .85s cubic-bezier(.7,0,.2,1)}
+.loader.done{transform:translateY(-101%)}
+.ld-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(13,153,255,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(13,153,255,.10) 1px,transparent 1px);background-size:34px 34px;-webkit-mask-image:radial-gradient(120% 90% at 50% 50%,#000 38%,transparent 80%);mask-image:radial-gradient(120% 90% at 50% 50%,#000 38%,transparent 80%)}
+.ld-stage{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:30px}
+.ld-sel{position:relative;padding:14px 24px}
+.ld-mark{font-family:var(--display);font-weight:800;font-size:clamp(40px,8vw,84px);letter-spacing:-.03em;color:var(--ink);display:block;opacity:0;animation:ldmark .5s ease .15s forwards}
+.ld-mark .o{color:var(--brand)}
+@keyframes ldmark{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.ld-sel::before{content:"";position:absolute;inset:0;border:1.5px solid var(--tool);clip-path:inset(0 100% 0 0);animation:ldbox .6s cubic-bezier(.6,.1,.2,1) .5s forwards}
+@keyframes ldbox{to{clip-path:inset(0 0 0 0)}}
+.ld-sel .h{position:absolute;width:9px;height:9px;background:#fff;border:1.5px solid var(--tool);border-radius:2px;opacity:0;transform:scale(.4);animation:ldh .25s ease forwards}
+.ld-sel .h.tl{left:-5px;top:-5px;animation-delay:1.05s}
+.ld-sel .h.tr{right:-5px;top:-5px;animation-delay:1.12s}
+.ld-sel .h.bl{left:-5px;bottom:-5px;animation-delay:1.19s}
+.ld-sel .h.br{right:-5px;bottom:-5px;animation-delay:1.26s}
+@keyframes ldh{to{opacity:1;transform:scale(1)}}
+.ld-dim{position:absolute;left:50%;bottom:-26px;transform:translateX(-50%);font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--tool);padding:2px 8px;border-radius:4px;white-space:nowrap;opacity:0;animation:lddim .3s ease 1.32s forwards}
+@keyframes lddim{from{opacity:0;transform:translateX(-50%) translateY(4px)}to{opacity:1;transform:translateX(-50%)}}
+.ld-bar{width:170px;height:3px;border-radius:3px;background:rgba(13,153,255,.16);overflow:hidden}
+.ld-bar span{display:block;height:100%;width:0;background:var(--tool);border-radius:3px;animation:ldbar 1.6s cubic-bezier(.5,.1,.2,1) .25s forwards}
+@keyframes ldbar{to{width:100%}}
+
+/* ===== hero load-in ===== */
+.hero .we,.hero .wordmark-wrap,.hero .avail,.hero .tagline,.hero-actions{opacity:0;transform:translateY(16px)}
+body.loaded .hero .we{animation:heroIn .7s cubic-bezier(.2,.7,.2,1) .1s forwards}
+body.loaded .hero .wordmark-wrap{animation:heroIn .85s cubic-bezier(.2,.7,.2,1) .2s forwards}
+body.loaded .hero .avail{animation:heroIn .7s cubic-bezier(.2,.7,.2,1) .45s forwards}
+body.loaded .hero .tagline{animation:heroIn .7s cubic-bezier(.2,.7,.2,1) .55s forwards}
+body.loaded .hero-actions{animation:heroIn .7s cubic-bezier(.2,.7,.2,1) .65s forwards}
+@keyframes heroIn{to{opacity:1;transform:none}}
+.hero .float .tape,.hero .float .pin-tag{opacity:0}
+body.loaded .hero .float .tape,body.loaded .hero .float .pin-tag{animation:popIn .6s cubic-bezier(.2,1.4,.4,1) forwards}
+body.loaded .tape-1 .tape{animation-delay:.7s}
+body.loaded .tape-2 .tape{animation-delay:.85s}
+body.loaded .tag-role .pin-tag{animation-delay:1s}
+body.loaded .tag-loc .pin-tag{animation-delay:1.12s}
+@keyframes popIn{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+
+/* ===== waving hand ===== */
+.wave{display:inline-block;transform-origin:70% 75%;animation:wave 4s ease-in-out infinite}
+@keyframes wave{0%,17%,100%{transform:rotate(0)}3%{transform:rotate(16deg)}7%{transform:rotate(-9deg)}11%{transform:rotate(16deg)}15%{transform:rotate(-5deg)}}
+
+/* ===== eyebrow self-writing handwriting ===== */
+.scribble{position:relative;display:inline-flex;align-items:center;gap:.35em;line-height:1}
+.scribble .hw{height:35px;width:auto;display:block;overflow:visible}
+.hw-ink{stroke-dasharray:1;stroke-dashoffset:1}
+.scribble.writing .hw-ink{animation:hwdraw 4.6s cubic-bezier(.5,0,.5,1) forwards}
+@keyframes hwdraw{to{stroke-dashoffset:0}}
+.ebmoji{display:inline-block;font-size:1.05em;transform-origin:60% 75%;filter:drop-shadow(0 0 0 rgba(255,200,60,0))}
+.scribble.writing .ebmoji{animation:ebglow 2.6s ease 1.6s infinite}
+@keyframes ebglow{0%,100%{filter:drop-shadow(0 0 0 rgba(255,200,60,0)) brightness(1);transform:scale(1) rotate(0)}50%{filter:drop-shadow(0 0 7px rgba(255,196,54,.95)) brightness(1.15);transform:scale(1.13) rotate(-5deg)}}
+
+/* ===== cta extras ===== */
+.cta-frame-name{position:absolute;top:-25px;left:4px;display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--tool);z-index:5}
+.cta-frame-name svg{width:12px;height:12px}
+.cta-note{position:absolute;top:42px;right:42px;z-index:4;font-family:var(--hand);font-weight:600;font-size:16px;line-height:1.3;background:#FBE9CF;border:1px solid var(--line-2);padding:12px 16px;border-radius:6px;box-shadow:0 14px 30px -16px rgba(20,32,43,.5);transform:rotate(3.5deg);max-width:200px;text-align:left}
+.cta-online{display:inline-flex;align-items:center;gap:9px;margin-top:24px;background:rgba(255,255,255,.72);backdrop-filter:blur(8px);border:1px solid var(--line-2);border-radius:999px;padding:6px 14px 6px 8px;font-family:var(--mono);font-size:11px;font-weight:700;color:var(--ink)}
+.cta-online .avs{display:flex}.cta-online .avs .av{width:21px;height:21px;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;font-family:var(--display);font-size:9px;font-weight:700;color:#fff}.cta-online .avs .av+.av{margin-left:-7px}
+.cta-online .gdot{width:7px;height:7px;border-radius:50%;background:#27c06b;box-shadow:0 0 0 3px #27c06b22}
+@media(max-width:760px){.cta-note{display:none}}
+
+/* ===== folded sticky-note corners ===== */
+.sec-head .note,.hero .tape{position:relative}
+.sec-head .note,.cta-note,.hero .tape{border-bottom-right-radius:1px}
+.sec-head .note::after,.cta-note::after,.hero .tape::after{content:"";position:absolute;right:0;bottom:0;width:17px;height:17px;pointer-events:none;border-bottom-right-radius:5px;background:linear-gradient(135deg,transparent 46%,rgba(255,255,255,.85) 47.5% 50%,rgba(20,32,43,.07) 51%,rgba(20,32,43,.2) 100%);box-shadow:-1px -1px 3px -1px rgba(20,32,43,.28)}
+

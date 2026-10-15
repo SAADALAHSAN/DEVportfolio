@@ -1,0 +1,14 @@
+/* work: contrast + real images + smaller heading */
+.witem .wix,.witem .wdate{color:rgba(20,32,43,.6)}.witem .wsub{color:#3f5566}.witem .wnm{font-size:clamp(26px,4.3vw,47px)}.wpreview{background:#0f1822}.wpreview img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}.witem .winline{overflow:hidden}.witem .winline img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;border-radius:12px}.flbl{display:none!important}
+.c-photo .fd-stage{overflow:hidden!important;border-radius:inherit}
+.c-photo .fd-dim{pointer-events:none}
+html{scroll-behavior:smooth}
+section[id],div[id],#about,#story,#process,#services,#work,#contact,.bento[id],.bio-card[id],.thread[id],.sv-story[id],.wlist[id],.card[id]{scroll-margin-top:85px !important}
+
+/* Animated circle expansion button morph for CTA & form submit */
+#collaborateCta,#lp-root .cta,.card .cta{background-color:var(--brand,#F0531C)!important;color:#fff!important;border-radius:12px!important;padding:15px 28px!important;font-family:var(--body,'Space Grotesk',sans-serif)!important;font-weight:700!important;font-size:15px!important;box-shadow:0 12px 26px -10px rgba(240,83,28,.5)!important;transition:transform .24s cubic-bezier(.2,.85,.25,1),box-shadow .24s!important;position:relative!important;overflow:hidden!important;isolation:isolate!important;border:0!important;cursor:pointer!important}
+#collaborateCta::before,#lp-root .cta::before,.card .cta::before{content:""!important;display:block!important;position:absolute!important;right:22px!important;top:50%!important;width:36px!important;height:36px!important;border-radius:50%!important;background:var(--ink,#0E1622)!important;transform:translateY(-50%) scale(0)!important;transform-origin:center center!important;transition:transform .6s cubic-bezier(.65,0,.35,1)!important;z-index:-1!important;pointer-events:none!important}
+#collaborateCta:hover::before,#lp-root .cta:hover::before,.card .cta:hover::before{transform:translateY(-50%) scale(70)!important}
+#collaborateCta:hover,#lp-root .cta:hover,.card .cta:hover{transform:translateY(-2px)!important;color:#fff!important;box-shadow:0 20px 40px -16px rgba(20,32,43,.45)!important}
+#collaborateCta svg,#lp-root .cta svg{width:17px!important;height:17px!important;transition:transform .24s cubic-bezier(.2,.8,.2,1)!important;position:relative!important;z-index:2!important}
+#collaborateCta:hover svg,#lp-root .cta:hover svg{transform:translateX(5px)!important}

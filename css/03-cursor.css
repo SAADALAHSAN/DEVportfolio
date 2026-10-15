@@ -1,0 +1,12 @@
+/* CURSOR */
+.cursor-layer{position:fixed;inset:0;pointer-events:none;z-index:9999999!important;display:none}
+@media(pointer:fine){.cursor-layer{display:block}}
+.fcursor{position:absolute;top:0;left:0;will-change:transform}
+.fcursor svg{width:22px;height:22px;filter:drop-shadow(0 2px 3px rgba(20,19,16,.27));transition:transform .15s}
+.fcursor .name{position:absolute;left:16px;top:16px;font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;padding:2px 8px;border-radius:5px;border-top-left-radius:0;white-space:nowrap;transition:background .15s;box-shadow:0 6px 16px -8px rgba(20,32,43,.6)}
+.fcursor.lbl-left .name{left:auto;right:14px;top:14px;border-top-left-radius:5px;border-top-right-radius:0}
+.fcursor.hot svg{transform:scale(1.25)}
+
+/* Hide curMate static POI badge permanently */
+#curMate { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+

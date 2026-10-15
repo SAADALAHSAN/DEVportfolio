@@ -1,0 +1,8 @@
+
+@media(pointer:fine){.sv-toggle,.sv-drop,.sv-dels,.sv-dels span{cursor:none!important}}
+#phero #phSub .ph-move::before{display:none}
+.sv-top{position:relative}
+.sv-shot{position:relative;z-index:2}
+.sv-left{position:relative;z-index:2}
+.sv-top::before{content:"";position:absolute;z-index:0;right:-3%;top:6%;width:58%;height:90%;pointer-events:none;background:radial-gradient(58% 55% at 42% 28%,rgba(13,153,255,.22),transparent 72%),radial-gradient(55% 55% at 72% 82%,rgba(240,83,28,.18),transparent 72%);filter:blur(36px);border-radius:44px}
+@media(max-width:900px){.sv-top::before{display:none}}

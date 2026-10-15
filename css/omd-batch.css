@@ -1,0 +1,24 @@
+
+
+.wa-float{position:fixed;right:15px;bottom:15px;z-index:80;display:none;opacity:0;transform:translateY(14px) scale(.96);transition:opacity .4s cubic-bezier(.34,1.56,.64,1),transform .4s cubic-bezier(.34,1.56,.64,1)}
+.wa-float.show{opacity:1;transform:none;animation:waBob 3.4s ease-in-out 1.2s infinite}
+@keyframes waBob{0%,90%,100%{transform:translateY(0)}95%{transform:translateY(-5px)}}
+.wa-float a{position:relative;display:flex;align-items:center;gap:11px;background:#fff;border:1px solid rgba(20,32,43,.08);border-radius:17px;padding:11px 17px 11px 13px;box-shadow:0 22px 46px -16px rgba(20,32,43,.5);text-decoration:none;overflow:hidden}
+.wa-float a::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--brand)}
+.wa-float .wa-av{width:40px;height:40px;border-radius:12px;background:var(--omFace) center/60% no-repeat var(--brand);position:relative;flex:none}
+.wa-float .wa-dot{position:absolute;right:-3px;bottom:-3px;width:13px;height:13px;border-radius:50%;background:#0FC27B;border:2.5px solid #fff}
+.wa-float .wa-body{display:flex;flex-direction:column;gap:1px}
+.wa-float .wa-top{display:flex;align-items:center;gap:7px}
+.wa-float .wa-top b{font-family:var(--display);font-weight:700;font-size:14px;color:var(--ink);letter-spacing:-.01em}
+.wa-float .wa-now{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0FC27B}
+.wa-float .wa-msg{font-family:var(--body);font-weight:500;font-size:13px;color:var(--ink-soft)}
+.wa-float .wa-msg .a{color:var(--brand);font-weight:700}
+.wa-float .wa-x{position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;border:none;background:#14202B;color:#fff;font-size:15px;line-height:22px;cursor:pointer;z-index:3;box-shadow:0 4px 10px -3px rgba(0,0,0,.45)}
+@media(max-width:760px){
+ #phero .ph-sub .ph-move,#phero .ph-sub .ph-sel{display:none}
+ #revStack article.rcard:nth-of-type(n+5){display:none}
+ .diff-body{grid-template-columns:1fr!important}.diff-spine{display:none}.diff-them{transform:none!important;filter:none!important;opacity:.94;margin-bottom:14px}
+ .foot-mail{font-size:clamp(16px,4.5vw,28px)!important;white-space:normal;word-break:break-all}
+ .wa-float{display:block}
+}
+@media(max-width:680px){.ph-fallback .hi{color:var(--brand)}}

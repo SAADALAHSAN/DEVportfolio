@@ -1,0 +1,19 @@
+
+.c-stmt .stmt-quote{flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(14px,1.6vw,20px);min-height:0;position:relative;z-index:2}
+.c-stmt .stmt-qm{line-height:0}
+.c-stmt .stmt-qm svg{width:clamp(38px,3.4vw,54px);height:auto;display:block}
+.c-stmt .stmt-head{font-family:var(--display);font-weight:800;font-size:clamp(27px,3.1vw,44px);line-height:1.0;letter-spacing:-.04em;color:var(--ink)}
+.c-stmt .stmt-head .stmt-em{color:var(--brand)}
+.c-stmt .stmt-sub{font-family:var(--body);font-weight:500;font-size:clamp(15px,1.55vw,20px);line-height:1.45;color:var(--ink-soft);max-width:44ch}
+.c-stmt .stmt-sub b{color:var(--ink);font-weight:800}
+.c-stmt .stmt-foot2{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding-top:20px;margin-top:10px;border-top:1px solid var(--line-2)}
+.c-stmt .stmt-sign2{font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.c-stmt .stmt-avail2{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#27c06b}
+.c-stmt .stmt-avail2 i{width:8px;height:8px;border-radius:50%;background:#27c06b;animation:cstmtpulse 2.4s infinite}
+.c-stmt .stmt-qm,.c-stmt .stmt-head,.c-stmt .stmt-sub,.c-stmt .stmt-foot2{opacity:0;transform:translateY(12px)}
+.stagger.in .c-stmt .stmt-qm{animation:cstmtRv .55s cubic-bezier(.2,.75,.3,1) .3s both}
+.stagger.in .c-stmt .stmt-head{animation:cstmtRv .6s cubic-bezier(.2,.75,.3,1) .4s both}
+.stagger.in .c-stmt .stmt-sub{animation:cstmtRv .55s cubic-bezier(.2,.75,.3,1) .52s both}
+.stagger.in .c-stmt .stmt-foot2{animation:cstmtRv .5s cubic-bezier(.2,.75,.3,1) .64s both}
+@media(max-width:900px){.c-stmt .stmt-head{font-size:clamp(28px,7vw,40px)}}
+@media(prefers-reduced-motion:reduce){.c-stmt .stmt-qm,.c-stmt .stmt-head,.c-stmt .stmt-sub,.c-stmt .stmt-foot2{opacity:1;transform:none;animation:none}.c-stmt .stmt-avail2 i{animation:none}}
