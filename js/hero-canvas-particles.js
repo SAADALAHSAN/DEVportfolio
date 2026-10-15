@@ -19,11 +19,10 @@
 
  var words = [
    "DEVELOPER",
-   "BUILDER",
+   "ИНЖЕНЕР",
+   "개발자",
    "ENGINEER",
-   "ARCHITECT",
-   "CREATOR",
-   "CODER"
+   "工程师"
  ];
  var currentWordIndex = 0;
  // Open, geometric, high-clarity font stack (prevents letters from clogging)
@@ -236,7 +235,7 @@
      if(document.hidden) return;
      currentWordIndex = (currentWordIndex + 1) % words.length;
      updateLine2(true);
-   }, 3600);
+   }, 3500);
  }
 
  function updateAndDrawGroup(group){

@@ -63,13 +63,23 @@ function applyLevel(idx) {
   if (p2) p2.textContent = lvl.p2;
   if (p3) p3.textContent = lvl.p3;
 
-  var pct = levelIdx === 0 ? '20%' : (levelIdx === 1 ? '58%' : '100%');
-  if (fill) fill.style.width = pct;
-
   if (track && handle) {
     var tw = track.clientWidth - handle.offsetWidth - 10;
     var posX = levelIdx === 0 ? 0 : (levelIdx === 1 ? tw * 0.5 : tw);
     handle.style.transform = 'translateX(' + posX + 'px)';
+
+    if (fill) {
+      if (levelIdx === 0) {
+        fill.style.width = '0px';
+        fill.style.opacity = '0';
+      } else if (levelIdx === 1) {
+        fill.style.opacity = '1';
+        fill.style.width = (posX + handle.offsetWidth + 5) + 'px';
+      } else {
+        fill.style.opacity = '1';
+        fill.style.width = '100%';
+      }
+    }
   }
 
   if (ea) ea.classList.toggle('on', levelIdx === 0);
@@ -113,7 +123,15 @@ if (handle) {
     var x = Math.max(0, Math.min(tw, e.clientX - r.left - handle.offsetWidth / 2));
     handle.style.transform = 'translateX(' + x + 'px)';
     var ratio = x / tw;
-    if (fill) fill.style.width = (20 + ratio * 80) + '%';
+    if (fill) {
+      if (x <= 6) {
+        fill.style.width = '0px';
+        fill.style.opacity = '0';
+      } else {
+        fill.style.opacity = '1';
+        fill.style.width = Math.min(track.clientWidth, x + handle.offsetWidth + 5) + 'px';
+      }
+    }
     var nextIdx = ratio < 0.35 ? 0 : (ratio < 0.7 ? 1 : 2);
     if (nextIdx !== levelIdx) {
       levelIdx = nextIdx;

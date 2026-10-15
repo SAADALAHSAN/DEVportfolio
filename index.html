@@ -58,7 +58,7 @@
   
 
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://www.saadalahsan.com/#person","name":"Saad Al Ahsan","url":"https://www.saadalahsan.com/","email":"hello@saadalahsan.com","description":"A designer and developer building bold brands, websites, and products that are impossible to ignore.","image":"https://www.saadalahsan.com/assets/favicon.png"},{"@type":"WebSite","@id":"https://www.saadalahsan.com/#site","url":"https://www.saadalahsan.com/","name":"Saad Al Ahsan","publisher":{"@id":"https://www.saadalahsan.com/#person"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://www.saadalahsan.com/#person","name":"Saad Al Ahsan","url":"https://www.saadalahsan.com/","email":"saadalahsanmain@gmail.com","description":"A designer and developer building bold brands, websites, and products that are impossible to ignore.","image":"https://www.saadalahsan.com/assets/favicon.png"},{"@type":"WebSite","@id":"https://www.saadalahsan.com/#site","url":"https://www.saadalahsan.com/","name":"Saad Al Ahsan","publisher":{"@id":"https://www.saadalahsan.com/#person"}}]}</script>
 </head>
 <body>
 
@@ -98,7 +98,7 @@
     <a class="home" href="#top">Home</a><a href="#about">About</a><a href="#process">Process</a><a href="#services">Services</a><a href="#work">Work</a><a href="#story">Story</a>
     <a class="cta" href="#contact">Contact</a>
   </nav>
-  <a class="pill mail-pill" href="mailto:hello@saadalahsan.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> hello@saadalahsan.com</a>
+  <a class="pill mail-pill" href="mailto:saadalahsanmain@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg> saadalahsanmain@gmail.com</a>
 </div>
 
 <div class="cursor-layer" id="cursorLayer">
@@ -237,9 +237,9 @@
 
           <!-- 4 MICRO CONTACT BOXES -->
           <div class="a4-contact-micro font-mono">
-            <a href="mailto:saadahsanmain@gmail.com" class="a4-micro-pill group">
+            <a href="mailto:saadalahsanmain@gmail.com" class="a4-micro-pill group">
               <span class="a4-[#pill-label]">Email:</span>
-              <span class="a4-pill-val">saadahsanmain@gmail.com</span>
+              <span class="a4-pill-val">saadalahsanmain@gmail.com</span>
             </a>
             <a href="https://t.me" target="_blank" rel="noopener" class="a4-micro-pill group">
               <span class="a4-[#pill-label]">Telegram:</span>
@@ -422,7 +422,7 @@
         <div class="ch"><span class="hash">#</span> saadalahsan &times; your-brand</div>
         <div class="on"><span class="avs"><span class="av av-logo">S</span><span class="av" style="background:#0D99FF">Y</span><span class="av" style="background:#141310">M</span></span><span class="grn"></span> 3 online</div>
       </div>
-      <div class="t-body stagger">
+      <div class="t-body stagger" id="chatThreadBody">
         <div class="step-div" style="--i:0"><span>01 · Reach out</span></div>
         <div class="msg client" style="--i:1"><div class="av">Y</div><div class="body"><div class="meta"><span class="nm">You</span><span class="tm">10:02</span></div><div class="tx">hey, need a bot / dashboard / fix built 🚀</div></div></div>
         <div class="msg studio" style="--i:2"><div class="av av-logo">S</div><div class="body"><div class="meta"><span class="nm">Saad</span><span class="tm">10:03</span></div><div class="tx">you're in 👋 what's the stack, what's the goal?</div></div></div>
@@ -435,7 +435,24 @@
         <div class="msg studio" style="--i:9"><div class="av av-logo">S</div><div class="body"><div class="meta"><span class="nm">Saad</span><span class="tm">Day 2</span></div><div class="tx">on it. iterating till it's solid</div></div></div>
         <div class="step-div" style="--i:10"><span>04 · Ship it</span></div>
         <div class="msg studio" style="--i:11"><div class="av av-logo">S</div><div class="body"><div class="meta"><span class="nm">Saad</span><span class="tm">Day 3</span></div><div class="tx">shipped ✨ deployed and live</div></div></div>
-        <div class="typing" style="--i:12"><div class="av"></div><div class="dots"><span></span><span></span><span></span></div></div>
+        <div class="dynamic-typing" id="dynamicTyping" style="display:none;"><div class="av">S</div><div class="dots"><span></span><span></span><span></span></div><span style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);margin-left:4px;">Saad is typing...</span></div>
+      </div>
+      <div class="t-foot">
+        <form class="t-form" id="chatThreadForm">
+          <div class="t-input-wrap">
+            <input type="text" id="chatThreadInput" class="t-input" placeholder="Message Saad or ask anything..." autocomplete="off" maxlength="300" />
+            <button type="submit" class="t-send-btn" id="chatThreadSend" aria-label="Send message">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+          <div class="t-hint">
+            <span>⚡ Interactive chat &bull; Instant auto-reply</span>
+            <span class="t-press">Press Enter ↵ to send</span>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -454,7 +471,82 @@
 <section class="work-alt workA">
   <div class="wrap">
     <div class="sec-head reveal"><span class="scribble"><svg class='hw' viewBox='-25 -99 1382 252' fill='none' xmlns='http://www.w3.org/2000/svg' aria-hidden='true' preserveAspectRatio='xMidYMid meet'><path class='hw-ink' pathLength='1' d='M6 42 L18 36L24 30L30 18L30 6L24 0L18 0L6 6L0 18L0 36L6 48L18 54L30 54L42 48L48 42L60 24L72 6L84 0L96 0L102 6L102 48L108 54L126 54L144 42L156 24M138 6 L132 0L120 0L114 6L90 48L84 54L72 54L66 48M156 24 L168 6L174 -6L168 18L132 126M168 18 L174 6L186 0L198 0L210 6L216 18L216 30L210 42L204 48L192 54M168 48 L180 54L198 54L216 48L228 42L246 24L258 6L276 -24L282 -36L288 -54L288 -66L282 -72L270 -66L264 -54L258 -30L252 12L252 48L258 54L264 54L276 48L282 42L294 24M330 0 L318 0L306 6L300 12L294 24L294 36L300 48L312 54L324 54L336 48L342 42L348 30L348 18L342 6L330 0L324 6L324 18L330 30L342 36L360 36L372 30L378 24L390 6L396 -6L396 6L414 6L420 12L420 24L414 42L414 48L420 54L426 54L438 48L444 42L456 24M462 42 L474 36L480 30L486 18L486 6L480 0L474 0L462 6L456 18L456 36L462 48L474 54L486 54L498 48L504 42L516 24M648 0 L636 0L624 6L618 12L612 24L612 36L618 48L630 54L642 54L654 48L660 42L666 30L666 18L660 6L648 0L642 6L642 18L648 30L660 36L678 36L690 30L696 24L708 0L696 36L696 48L702 54L714 54L726 48L738 36L750 18M756 0 L744 36L744 48L750 54L756 54L768 48L774 42L786 24L798 6L804 -6L804 6L822 6L828 12L828 24L822 42L822 48L828 54L834 54L846 48L852 42L864 24M978 0 L966 12L960 30L960 42L966 54L978 54L990 48L1002 36M1014 0 L1002 36L1002 48L1008 54L1020 54L1032 48L1044 36L1050 18L1050 0L1056 24L1062 30L1074 30L1086 24M1122 0 L1110 0L1098 6L1092 12L1086 24L1086 36L1092 48L1104 54L1116 54L1128 48L1134 42L1140 30L1140 18L1134 6L1122 0L1116 6L1116 18L1122 30L1134 36L1152 36L1164 30L1170 24L1182 6L1188 -6L1188 6L1206 6L1212 12L1212 24L1206 42L1206 48L1212 54L1218 54L1230 48L1236 42L1248 24L1260 6L1278 -24L1284 -36L1290 -54L1290 -66L1284 -72L1272 -66L1266 -54L1260 -30L1254 6L1248 54L1254 36L1260 24L1272 6L1284 0L1296 0L1302 6L1302 18L1290 24L1272 24L1284 30L1290 48L1296 54L1302 54L1314 48L1320 42L1332 24' stroke='#F0531C' stroke-width='10' stroke-linecap='round' stroke-linejoin='round'/></svg></span><h2>Featured works</h2><span class="note">The good kind of name-drop. Hover to peek.</span></div>
-    <div class="wlist reveal" id="work"><a class="witem" data-img="assets/pruf-protocol.png" href="https://www.prufprotocol.io/" target="_blank" rel="noopener"><span class="wix">/01</span><span class="wnm">PRUF Protocol</span><span class="wmid"><span class="wsub">The Decentralized Engagement Layer for Web3 &amp; Verification Content Finance.</span><span class="wtags"><span class="ft">BLOCKCHAIN</span><span class="ft">GOVERNANCE</span><span class="ft">WEB3</span></span></span><span class="wdate">2025</span><span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="winline"><img src="assets/pruf-protocol.png" alt="PRUF Protocol" loading="lazy"/></span></a><a class="witem" data-img="assets/devlands.png" href="https://devlnds.vercel.app/" target="_blank" rel="noopener"><span class="wix">/02</span><span class="wnm">Devlands</span><span class="wmid"><span class="wsub">Premier engineering agency &amp; systems architecture platform for next-gen web.</span><span class="wtags"><span class="ft">DEVELOPMENT</span><span class="ft">SYSTEMS</span><span class="ft">AGENCY</span></span></span><span class="wdate">2025</span><span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="winline"><img src="assets/devlands.png" alt="Devlands" loading="lazy"/></span></a><a class="witem" data-img="assets/jupiter.webp" href="#" target="_blank" rel="noopener"><span class="wix">/03</span><span class="wnm">Tradespy</span><span class="wmid"><span class="wsub">Real-time market analytics and signals platform for traders.</span><span class="wtags"><span class="ft">TRADING</span><span class="ft">ANALYTICS</span><span class="ft">PYTHON</span></span></span><span class="wdate">2025</span><span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="winline"><img src="assets/jupiter.webp" alt="Tradespy" loading="lazy"/></span></a><a class="witem" data-img="assets/CorgiLabs.webp" href="#" target="_blank" rel="noopener"><span class="wix">/04</span><span class="wnm">Solana Animal</span><span class="wmid"><span class="wsub">High-throughput Solana NFT &amp; meme ecosystem.</span><span class="wtags"><span class="ft">SOLANA</span><span class="ft">NFT</span><span class="ft">WEB3</span></span></span><span class="wdate">2025</span><span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span><span class="winline"><img src="assets/CorgiLabs.webp" alt="Solana Animal" loading="lazy"/></span></a></div><div style="text-align:center;margin-top:40px" class="reveal"><a class="btn ghost" href="/work" target="_blank" rel="noopener">See more work &rarr;</a></div>
+    <div class="wlist reveal" id="work">
+      <a class="witem" data-img="assets/pruf-protocol.png" href="https://www.prufprotocol.io/" target="_blank" rel="noopener">
+        <span class="wix">/01</span>
+        <span class="wnm">PRUF Protocol</span>
+        <span class="wmid">
+          <span class="wsub">The Decentralized Engagement Layer for Web3 &amp; Verification Content Finance.</span>
+          <span class="wtags"><span class="ft">BLOCKCHAIN</span><span class="ft">GOVERNANCE</span><span class="ft">WEB3</span></span>
+        </span>
+        <span class="wdate">2025</span>
+        <span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span class="winline"><img src="assets/pruf-protocol.png" alt="PRUF Protocol" loading="lazy"/></span>
+      </a>
+      <a class="witem" data-img="assets/devlands.png" href="https://devlnds.vercel.app/" target="_blank" rel="noopener">
+        <span class="wix">/02</span>
+        <span class="wnm">Devlands</span>
+        <span class="wmid">
+          <span class="wsub">Premier engineering agency &amp; systems architecture platform for next-gen web.</span>
+          <span class="wtags"><span class="ft">DEVELOPMENT</span><span class="ft">SYSTEMS</span><span class="ft">AGENCY</span></span>
+        </span>
+        <span class="wdate">2025</span>
+        <span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span class="winline"><img src="assets/devlands.png" alt="Devlands" loading="lazy"/></span>
+      </a>
+      <a class="witem" data-img="assets/jupiter.webp" href="#" target="_blank" rel="noopener">
+        <span class="wix">/03</span>
+        <span class="wnm">Tradespy</span>
+        <span class="wmid">
+          <span class="wsub">Real-time market analytics and signals platform for traders.</span>
+          <span class="wtags"><span class="ft">TRADING</span><span class="ft">ANALYTICS</span><span class="ft">PYTHON</span></span>
+        </span>
+        <span class="wdate">2025</span>
+        <span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span class="winline"><img src="assets/jupiter.webp" alt="Tradespy" loading="lazy"/></span>
+      </a>
+      <a class="witem" data-img="assets/CorgiLabs.webp" href="#" target="_blank" rel="noopener">
+        <span class="wix">/04</span>
+        <span class="wnm">Solana Animal</span>
+        <span class="wmid">
+          <span class="wsub">High-throughput Solana NFT &amp; meme ecosystem.</span>
+          <span class="wtags"><span class="ft">SOLANA</span><span class="ft">NFT</span><span class="ft">WEB3</span></span>
+        </span>
+        <span class="wdate">2025</span>
+        <span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+        <span class="winline"><img src="assets/CorgiLabs.webp" alt="Solana Animal" loading="lazy"/></span>
+      </a>
+      <!-- EXPANDABLE EXTRA PROJECTS -->
+      <div class="wlist-more" id="wlistMore" aria-hidden="true">
+        <a class="witem" data-img="assets/primebitsolutions.webp" href="https://www.primebitsolutions.com/" target="_blank" rel="noopener">
+          <span class="wix">/05</span>
+          <span class="wnm">PrimeBit Solutions</span>
+          <span class="wmid">
+            <span class="wsub">High-fidelity interfaces, scalable web applications and engineering ecosystem.</span>
+            <span class="wtags"><span class="ft">DEVELOPMENT</span><span class="ft">WEB APPS</span><span class="ft">AGENCY</span></span>
+          </span>
+          <span class="wdate">2026</span>
+          <span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <span class="winline"><img src="assets/primebitsolutions.webp" alt="PrimeBit Solutions" loading="lazy"/></span>
+        </a>
+        <a class="witem" data-img="assets/meowshi.webp" href="https://www.moewshiuniverse.com/" target="_blank" rel="noopener">
+          <span class="wix">/06</span>
+          <span class="wnm">Meowshi</span>
+          <span class="wmid">
+            <span class="wsub">The Cat Hero &mdash; Dedicated cat welfare movement &amp; crypto community ecosystem.</span>
+            <span class="wtags"><span class="ft">CRYPTO</span><span class="ft">WEB3</span><span class="ft">COMMUNITY</span></span>
+          </span>
+          <span class="wdate">2026</span>
+          <span class="warr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+          <span class="winline"><img src="assets/meowshi.webp" alt="Meowshi" loading="lazy"/></span>
+        </a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px" class="reveal">
+      <button class="btn ghost btn-more-work" id="btnToggleWork" type="button" aria-expanded="false">
+        <span class="btn-text">See more work &rarr;</span>
+      </button>
+    </div>
   </div>
 </section>
 
@@ -600,12 +692,12 @@
     <div class="foot-top">
       <div class="foot-cta">
         <div class="foot-eyebrow">have an idea worth building?</div>
-        <a class="foot-mail" href="mailto:saadahsanmain@gmail.com">saadahsanmain@gmail.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="foot-mail" href="mailto:saadalahsanmain@gmail.com">saadalahsanmain@gmail.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         <div class="foot-row"><a class="foot-book" href="https://cal.com/saadalahsan/30min" target="_blank" rel="noopener">Let's talk <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><span class="foot-live"><span class="foot-dot"></span> open to new builds</span></div>
       </div>
       <div class="foot-nav">
         <div class="fcol"><h4>Portfolio</h4><a href="#about">About</a><a href="#services">Services</a><a href="/work">Work</a><a href="#pricing">Pricing</a></div>
-        <div class="fcol"><h4>Company</h4><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><div class="fcol"><h4>Connect</h4><a href="https://www.instagram.com/saadalahsan" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/saadalahsan" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/SAADALAHSAN" target="_blank" rel="noopener">GitHub</a><a href="mailto:saadahsanmain@gmail.com">Email</a></div>
+        <div class="fcol"><h4>Company</h4><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div><div class="fcol"><h4>Connect</h4><a href="https://www.instagram.com/saadalahsan" target="_blank" rel="noopener">Instagram</a><a href="https://www.linkedin.com/in/saadalahsan" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/SAADALAHSAN" target="_blank" rel="noopener">GitHub</a><a href="mailto:saadalahsanmain@gmail.com">Email</a></div>
       </div>
     </div>
   </div>
@@ -678,6 +770,7 @@
 
 <script src="js/ruler-scroll-progress.js"></script>
 <script src="js/variable-proximity.js"></script>
+<script src="js/chat-thread.js"></script>
 
 </body>
 </html>

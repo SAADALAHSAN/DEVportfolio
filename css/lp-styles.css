@@ -58,7 +58,7 @@
 #lp-root .ends .a.on .pr{color:var(--brand)}
 #lp-root .track{position:relative;height:60px;border-radius:40px;background:linear-gradient(180deg,#e2e7ee,#eef2f6);box-shadow:inset 0 3px 8px rgba(30,50,80,.2),inset 0 -1px 0 rgba(255,255,255,.85);overflow:hidden}
 #lp-root .track::after{content:"";position:absolute;left:50%;top:13px;bottom:13px;width:2px;background:repeating-linear-gradient(#0000 0 3px,rgba(120,140,160,.35) 3px 7px);z-index:1;pointer-events:none}
-#lp-root .fill{position:absolute;left:0;top:0;bottom:0;border-radius:40px;background:linear-gradient(90deg,#2b3b4c,#141d27);width:52%;transition:width .55s cubic-bezier(.3,1.4,.5,1);z-index:1}
+#lp-root .fill{position:absolute;left:0;top:0;bottom:0;border-radius:40px;background:linear-gradient(90deg,#2b3b4c,#141d27);width:0;opacity:0;transition:width .55s cubic-bezier(.3,1.4,.5,1),opacity .3s ease;z-index:1;pointer-events:none}
 #lp-root .tdest{position:absolute;right:70px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#98a7b5;z-index:2;transition:opacity .35s}
 #lp-root .track.crossed .tdest{opacity:0}
 #lp-root .handle{position:absolute;top:5px;bottom:5px;width:88px;border-radius:34px;background:linear-gradient(180deg,#ffffff,#e7edf3);box-shadow:0 9px 18px -4px rgba(30,50,80,.4),inset 0 1px 0 #fff;left:5px;transition:transform .55s cubic-bezier(.3,1.4,.5,1);display:flex;align-items:center;justify-content:center;gap:7px;touch-action:none;z-index:3}
